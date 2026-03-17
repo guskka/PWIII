@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+
+:root {
+	--font-scale: 1.333;
+
+	--p: 1rem;
+	--h5: calc(var(--p) * var(--font-scale));
+	--h4: calc(var(--h5) * var(--font-scale));
+	--h3: calc(var(--h4) * var(--font-scale));
+	--h2: calc(var(--h3) * var(--font-scale));
+	--h1: calc(var(--h2) * var(--font-scale));
+
+	--small: calc(var(--p) / var(--font-scale));
+	--margin-lg: 0 12%;
+	--margin-md: 0 6%;
+
+	--border1: 1rem;
+	--border05: 0.5rem;
+
+	font-family: "Walter Turncoat", cursive;
+}

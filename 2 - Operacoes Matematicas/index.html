@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/style.css">
+
+    <link rel="icon" type="image/svg+xml" href="src/assets/math.svg">
+    <title>Operações Matemáticas</title>
+</head>
+
+<body>
+    <header>
+        <aside class="btnSidebarOpen">
+            <button onclick="openSidebar()"><i class="bx bx-menu"></i></button>
+        </aside>
+        <h1>Operações Matemáticas</h1>
+    </header>
+
+    <aside id="sidebar">
+        <nav class="navSidebar">
+            <div class="btnSidebarClose">
+                <button onclick="closeSidebar()"><i class="bx bx-x"></i></button>
+            </div>
+            <hr>
+            <div class="operationItem">
+                <a onclick="closeSidebar()" draggable="false" href="#multiplicacoes">Multiplicações</a>
+            </div>
+            <hr>
+            <div class="operationItem">
+                <a onclick="closeSidebar()" draggable="false" href="#exponenciacoes">Exponenciações</a>
+            </div>
+            <hr>
+            <div class="operationItem">
+                <a onclick="closeSidebar()" draggable="false" href="#formulas">Fórmulas</a>
+            </div>
+            <hr>
+        </nav>
+    </aside>
+
+    <article id="multiplicacoes">
+        <div class="inputContainer">
+            <h2>Multiplicação</h2>
+            <input id="numMultiplicacao" type="number" placeholder="Digite um número...">
+        </div>
+        <div class="operacoes">
+            <div class="operacaoDobro">
+                <h3>Dobro</h3>
+                <input id="resDobro" disabled="true" type="number">
+            </div>
+            <div class="operacaoTriplo">
+                <h3>Triplo</h3>
+                <input id="resTriplo" disabled="true" type="number">
+            </div>
+            <div class="operacaoQuadruplo">
+                <h3>Quádruplo</h3>
+                <input id="resQuadruplo" disabled="true" type="number">
+            </div>
+            <div class="operacaoQuintuplo">
+                <h3>Quíntuplo</h3>
+                <input id="resQuintuplo" disabled="true" type="number">
+            </div>
+            <div class="operacaoSextuplo">
+                <h3>Sêxtuplo</h3>
+                <input id="resSextuplo" disabled="true" type="number">
+            </div>
+        </div>
+    </article>
+
+    <article id="exponenciacoes">
+        <div class="inputContainer">
+            <h2>Exponenciações</h2>
+            <input id="numExponenciacao" type="number" placeholder="Digite um número...">
+        </div>
+        <div class="operacoes">
+            <div class="operacaoQuadrado">
+                <h3>Quadrado</h3>
+                <input id="resQuadrado" disabled="true" type="number">
+            </div>
+            <div class="operacaoCubo">
+                <h3>Cubo</h3>
+                <input id="resCubo" disabled="true" type="number">
+            </div>
+            <div class="operacaoQuarta">
+                <h3>Quarta</h3>
+                <input id="resQuarta" disabled="true" type="number">
+            </div>
+            <div class="operacaoQuinta">
+                <h3>Quinta</h3>
+                <input id="resQuinta" disabled="true" type="number">
+            </div>
+            <div class="operacaoSexta">
+                <h3>Sexta</h3>
+                <input id="resSexta" disabled="true" type="number">
+            </div>
+        </div>
+    </article>
+    <article>
+        <h2 id="formulas">Fórmulas</h2>
+        <div class="operacaoBhaskara">
+            <h3>Quadrado</h3>
+            <input id="" type="">
+        </div>
+        <div class="operacaoAritmetica">
+            <h3>Média Aritmética</h3>
+            <input id="" type="">
+        </div>
+    </article>
+
+    <script src="src/js/components/sidebar.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+</body>
+
+</html>
