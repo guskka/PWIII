@@ -42,11 +42,13 @@
     </aside>
 
     <article id="multiplicacoes">
-        <div class="inputContainer">
+        <div class="titleArticle">
             <h2>Multiplicação</h2>
-            <input id="numMultiplicacao" type="number" placeholder="Digite um número...">
+            <div class="inputContainer">
+                <input id="numMultiplicacao" type="number" placeholder="Digite um número...">
+            </div>
         </div>
-        <div class="operacoes">
+        <div id="operacoesMultiplicacao" class="operacoes">
             <div class="operacaoDobro">
                 <h3>Dobro</h3>
                 <input id="resDobro" disabled="true" type="number">
@@ -71,9 +73,11 @@
     </article>
 
     <article id="exponenciacoes">
-        <div class="inputContainer">
+        <div class="titleArticle">
             <h2>Exponenciações</h2>
-            <input id="numExponenciacao" type="number" placeholder="Digite um número...">
+            <div class="inputContainer">
+                <input id="numExponenciacao" type="number" placeholder="Digite um número...">
+            </div>
         </div>
         <div class="operacoes">
             <div class="operacaoQuadrado">
@@ -98,15 +102,23 @@
             </div>
         </div>
     </article>
-    <article>
-        <h2 id="formulas">Fórmulas</h2>
-        <div class="operacaoBhaskara">
-            <h3>Quadrado</h3>
-            <input id="" type="">
+
+    <article id="bhaskara">
+        <div class="titleArticle">
+            <h2>Bhaskara</h2>
+            <p class="descFormula">ax² + bx + c = 0</p>
+            <div class="inputContainer">
+                <input id="numA" type="number" required="true" placeholder="Digite o valor de a...">
+                <input id="numB" type="number" required="true" placeholder="Digite o valor de b...">
+                <input id="numC" type="number" required="true" placeholder="Digite o valor de c...">
+                <button id="btnCalcBhaskara" onclick="calcBhaskara()">Calcular</button>
+            </div>
         </div>
-        <div class="operacaoAritmetica">
-            <h3>Média Aritmética</h3>
-            <input id="" type="">
+        <div class="operacoes">
+            <div class="operacaoQuadrado">
+                <h3>Quadrado</h3>
+                <input id="resQuadrado" disabled="true" type="number">
+            </div>
         </div>
     </article>
 
