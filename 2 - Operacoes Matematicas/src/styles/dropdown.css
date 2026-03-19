@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: .25rem;
+    padding: .15rem;
     border-radius: 100%;
     border: 2px solid var(--red);
     background-color: transparent;
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: .25rem;
+    padding: .15rem;
     border-radius: 100%;
     border: 2px solid var(--yellow);
     background-color: transparent;
@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: .25rem;
+    padding: .15rem;
     border-radius: 100%;
     border: 2px solid var(--orange);
     background-color: transparent;
