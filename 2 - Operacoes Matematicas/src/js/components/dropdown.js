@@ -30,3 +30,14 @@ function dropdownBhaskara() {
         document.getElementById("dropdownBhaskara").innerHTML = "<i class='bx bx-chevron-up'></i>";
     }
 }
+
+function dropdownMediaAritmetica() {
+    if (document.getElementById("operacoesMediaAritmetica").style.display === "flex") {
+        document.getElementById("operacoesMediaAritmetica").style.display = "none";
+        document.getElementById("dropdownMediaAritmetica").innerHTML = "<i class='bx bx-chevron-down'></i>";
+    }
+    else {
+        document.getElementById("operacoesMediaAritmetica").style.display = "flex";
+        document.getElementById("dropdownMediaAritmetica").innerHTML = "<i class='bx bx-chevron-up'></i>";
+    }
+}

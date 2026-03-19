@@ -18,7 +18,7 @@ numMultiplicacao.addEventListener("input", () => {
         document.getElementById("operacoesMultiplicacao").style.display = "flex";
     }
 
-    const valor = numMultiplicacao.value;
+    const valor = parseFloat(numMultiplicacao.value);
 
     resDobro.value = valor * 2;
     resTriplo.value = valor * 3;

@@ -45,7 +45,7 @@
         <div class="titleArticle">
             <div class="titleShow">
                 <h2>Multiplicação</h2>
-                <button id="dropdownMultiplicacao" onclick="dropdownMultiplicacoes()"><i
+                <button class="btnDropdown" id="dropdownMultiplicacao" onclick="dropdownMultiplicacoes()"><i
                         class='bx bx-chevron-down'></i></button>
             </div>
             <div class="inputContainer">
@@ -80,7 +80,7 @@
         <div class="titleArticle">
             <div class="titleShow">
                 <h2>Exponenciação</h2>
-                <button id="dropdownExpoente" onclick="dropdownExponenciacoes()"><i
+                <button class="btnDropdown" id="dropdownExpoente" onclick="dropdownExponenciacoes()"><i
                         class='bx bx-chevron-down'></i></button>
             </div>
             <div class="inputContainer">
@@ -115,7 +115,7 @@
         <div class="titleArticle">
             <div class="titleShow">
                 <h2>Bhaskara</h2>
-                <button id="dropdownBhaskara" onclick="dropdownBhaskara()"><i
+                <button class="btnDropdown" id="dropdownBhaskara" onclick="dropdownBhaskara()"><i
                         class='bx bx-chevron-down'></i></button>
             </div>
             <p id="descFormulaBhaskara">ax² + bx + c = 0</p>
@@ -142,11 +142,36 @@
         </div>
     </article>
 
+    <article id="mediaAritmetica">
+        <div class="titleArticle">
+            <div class="titleShow">
+                <h2>Média Aritmética</h2>
+                <button class="btnDropdown" id="dropdownMediaAritmetica" onclick="dropdownMediaAritmetica()"><i
+                        class='bx bx-chevron-down'></i></button>
+            </div>
+            <p id="descFormulaMediaAritmetica">M = (x1 + x2 + x3 + x4) / 4</p>
+            <div class="inputContainer">
+                <input id="numX1" type="number" placeholder="Digite o valor de x1..." required>
+                <input id="numX2" type="number" placeholder="Digite o valor de x2..." required>
+                <input id="numX3" type="number" placeholder="Digite o valor de x3..." required>
+                <input id="numX4" type="number" placeholder="Digite o valor de x4..." required>
+                <button onclick="calcMediaAritmetica()" type="submit" id="btnCalcMediaAritmetica">Calcular</button>
+            </div>
+        </div>
+        <div id="operacoesMediaAritmetica" class="operacoes">
+            <div class="operacaoMediaAritmetica">
+                <h3>Média</h3>
+                <input id="resMediaAritmetica" disabled="true" type="number">
+            </div>
+        </div>
+    </article>
+
     <script src="src/js/components/sidebar.js"></script>
     <script src="src/js/components/dropdown.js"></script>
     <script src="src/js/features/multiplicacao.js"></script>
     <script src="src/js/features/exponenciacao.js"></script>
     <script src="src/js/features/bhaskara.js"></script>
+    <script src="src/js/features/mediaAritmetica.js"></script>
 </body>
 
 </html>

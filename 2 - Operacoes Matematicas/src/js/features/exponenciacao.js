@@ -18,7 +18,7 @@ numExponenciacao.addEventListener("input", () => {
         document.getElementById("operacoesExponenciacoes").style.display = "flex";
     }
 
-    const valor = numExponenciacao.value;
+    const valor = parseFloat(numExponenciacao.value);
 
     resQuadrado.value = valor ** 2;
     resCubo.value = valor ** 3;

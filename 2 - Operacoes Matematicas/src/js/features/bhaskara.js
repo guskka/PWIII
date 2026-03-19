@@ -34,9 +34,9 @@ function calcBhaskara() {
         document.getElementById("operacoesBhaskara").style.display = "flex";
     }
 
-    const valorA = numA.value;
-    const valorB = numB.value;
-    const valorC = numC.value;
+    const valorA = parseFloat(numA.value);
+    const valorB = parseFloat(numB.value);
+    const valorC = parseFloat(numC.value);
 
     resDelta.value = (valorB ** 2) - 4 * valorA * valorC;
 

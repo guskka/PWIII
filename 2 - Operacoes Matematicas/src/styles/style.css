@@ -88,7 +88,21 @@ article .operacoes div {
     color: var(--orange);
 }
 
+#mediaAritmetica h2 {
+    color: var(--green);
+}
+
 #descFormulaBhaskara {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--orange);
+}
+
+#descFormulaMediaAritmetica {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--green);
+}
+
+#operacoesMediaAritmetica {
+    justify-content: center;
+    align-items: center;
 }

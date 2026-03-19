@@ -56,11 +56,25 @@ article .operacoes input {
     background-color: transparent;
 }
 
+#mediaAritmetica .titleArticle input:focus {
+    border: 2px solid var(--green);
+    background-color: transparent;
+}
+
 #bhaskara #btnCalcBhaskara {
     padding: .75rem 2rem;
     width: 100%;
     color: var(--bg0-hard);
     background-color: var(--orange);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mediaAritmetica #btnCalcMediaAritmetica {
+    padding: .75rem 2rem;
+    width: 88%;
+    color: var(--bg0-hard);
+    background-color: var(--green);
     font-weight: bold;
     cursor: pointer;
 }
