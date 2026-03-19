@@ -14,7 +14,10 @@ resSexta.value = 0;
 document.getElementById("operacoesExponenciacoes").style.display = "none";
 
 numExponenciacao.addEventListener("input", () => {
-    if (numExponenciacao.value != "") {
+    if (numExponenciacao.value === "") {
+        document.getElementById("operacoesExponenciacoes").style.display = "none";
+    }
+    else {
         document.getElementById("operacoesExponenciacoes").style.display = "flex";
     }
 

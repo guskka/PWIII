@@ -14,7 +14,10 @@ resSextuplo.value = 0;
 document.getElementById("operacoesMultiplicacao").style.display = "none";
 
 numMultiplicacao.addEventListener("input", () => {
-    if (numMultiplicacao.value != "") {
+    if (numMultiplicacao.value === "") {
+        document.getElementById("operacoesMultiplicacao").style.display = "none";
+    }
+    else {
         document.getElementById("operacoesMultiplicacao").style.display = "flex";
     }
 

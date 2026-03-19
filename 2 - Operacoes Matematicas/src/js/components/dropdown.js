@@ -41,3 +41,14 @@ function dropdownMediaAritmetica() {
         document.getElementById("dropdownMediaAritmetica").innerHTML = "<i class='bx bx-chevron-up'></i>";
     }
 }
+
+function dropdownImparPar() {
+    if (document.getElementById("operacoesImparPar").style.display === "flex") {
+        document.getElementById("operacoesImparPar").style.display = "none";
+        document.getElementById("dropdownImparPar").innerHTML = "<i class='bx bx-chevron-down'></i>";
+    }
+    else {
+        document.getElementById("operacoesImparPar").style.display = "flex";
+        document.getElementById("dropdownImparPar").innerHTML = "<i class='bx bx-chevron-up'></i>";
+    }
+}

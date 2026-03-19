@@ -51,12 +51,12 @@ article .operacoes input {
     background-color: transparent;
 }
 
-#bhaskara .titleArticle input:focus {
+#imparPar .titleArticle input:focus {
     border: 2px solid var(--orange);
     background-color: transparent;
 }
 
-#mediaAritmetica .titleArticle input:focus {
+#bhaskara .titleArticle input:focus {
     border: 2px solid var(--green);
     background-color: transparent;
 }
@@ -65,16 +65,21 @@ article .operacoes input {
     padding: .75rem 2rem;
     width: 100%;
     color: var(--bg0-hard);
-    background-color: var(--orange);
+    background-color: var(--green);
     font-weight: bold;
     cursor: pointer;
+}
+
+#mediaAritmetica .titleArticle input:focus {
+    border: 2px solid var(--aqua);
+    background-color: transparent;
 }
 
 #mediaAritmetica #btnCalcMediaAritmetica {
     padding: .75rem 2rem;
     width: 88%;
     color: var(--bg0-hard);
-    background-color: var(--green);
+    background-color: var(--aqua);
     font-weight: bold;
     cursor: pointer;
 }

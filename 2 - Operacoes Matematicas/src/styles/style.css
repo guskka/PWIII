@@ -84,25 +84,34 @@ article .operacoes div {
     color: var(--yellow);
 }
 
-#bhaskara h2 {
+#imparPar h2 {
     color: var(--orange);
 }
 
-#mediaAritmetica h2 {
+#bhaskara h2 {
     color: var(--green);
+}
+
+#mediaAritmetica h2 {
+    color: var(--aqua);
 }
 
 #descFormulaBhaskara {
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid var(--green);
 }
 
 #descFormulaMediaAritmetica {
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--green);
+    border-bottom: 1px solid var(--aqua);
 }
 
 #operacoesMediaAritmetica {
+    justify-content: center;
+    align-items: center;
+}
+
+#operacoesImparPar {
     justify-content: center;
     align-items: center;
 }

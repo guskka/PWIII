@@ -26,18 +26,26 @@
     color: var(--yellow);
 }
 
-#dropdownBhaskara {
+#dropdownImparPar {
     border: 2px solid var(--orange);
 }
 
-#bhaskara i {
+#imparPar i {
     color: var(--orange);
 }
 
-#dropdownMediaAritmetica {
+#dropdownBhaskara {
     border: 2px solid var(--green);
 }
 
-#mediaAritmetica i {
+#bhaskara i {
     color: var(--green);
+}
+
+#dropdownMediaAritmetica {
+    border: 2px solid var(--aqua);
+}
+
+#mediaAritmetica i {
+    color: var(--aqua);
 }
