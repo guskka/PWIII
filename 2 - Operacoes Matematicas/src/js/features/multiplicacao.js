@@ -28,7 +28,6 @@ numMultiplicacao.addEventListener("input", () => {
 
     const valor = numMultiplicacao.value;
 
-
     resDobro.value = valor * 2;
     resTriplo.value = valor * 3;
     resQuadruplo.value = valor * 4;

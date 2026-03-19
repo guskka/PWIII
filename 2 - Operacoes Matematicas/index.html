@@ -79,7 +79,7 @@
                 <input id="numExponenciacao" type="number" placeholder="Digite um número...">
             </div>
         </div>
-        <div class="operacoes">
+        <div id="operacoesExponenciacoes" class="operacoes">
             <div class="operacaoQuadrado">
                 <h3>Quadrado</h3>
                 <input id="resQuadrado" disabled="true" type="number">
@@ -106,18 +106,12 @@
     <article id="bhaskara">
         <div class="titleArticle">
             <h2>Bhaskara</h2>
-            <p class="descFormula">ax² + bx + c = 0</p>
+            <p id="descFormulaBhaskara">ax² + bx + c = 0</p>
             <div class="inputContainer">
                 <input id="numA" type="number" required="true" placeholder="Digite o valor de a...">
                 <input id="numB" type="number" required="true" placeholder="Digite o valor de b...">
                 <input id="numC" type="number" required="true" placeholder="Digite o valor de c...">
                 <button id="btnCalcBhaskara" onclick="calcBhaskara()">Calcular</button>
-            </div>
-        </div>
-        <div class="operacoes">
-            <div class="operacaoQuadrado">
-                <h3>Quadrado</h3>
-                <input id="resQuadrado" disabled="true" type="number">
             </div>
         </div>
     </article>
