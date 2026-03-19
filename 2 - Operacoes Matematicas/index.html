@@ -43,7 +43,11 @@
 
     <article id="multiplicacoes">
         <div class="titleArticle">
-            <h2>Multiplicação</h2>
+            <div class="titleShow">
+                <h2>Multiplicação</h2>
+                <button id="dropdownMultiplicacao" onclick="dropdownMultiplicacoes()"><i
+                        class='bx bx-chevron-down'></i></button>
+            </div>
             <div class="inputContainer">
                 <input id="numMultiplicacao" type="number" placeholder="Digite um número...">
             </div>
@@ -74,7 +78,11 @@
 
     <article id="exponenciacoes">
         <div class="titleArticle">
-            <h2>Exponenciações</h2>
+            <div class="titleShow">
+                <h2>Exponenciação</h2>
+                <button id="dropdownExpoente" onclick="dropdownExponenciacoes()"><i
+                        class='bx bx-chevron-down'></i></button>
+            </div>
             <div class="inputContainer">
                 <input id="numExponenciacao" type="number" placeholder="Digite um número...">
             </div>
@@ -105,13 +113,17 @@
 
     <article id="bhaskara">
         <div class="titleArticle">
-            <h2>Bhaskara</h2>
+            <div class="titleShow">
+                <h2>Bhaskara</h2>
+                <button id="dropdownBhaskara" onclick="dropdownBhaskara()"><i
+                        class='bx bx-chevron-down'></i></button>
+            </div>
             <p id="descFormulaBhaskara">ax² + bx + c = 0</p>
             <div class="inputContainer">
-                <input id="numA" type="number" required="true" placeholder="Digite o valor de a...">
-                <input id="numB" type="number" required="true" placeholder="Digite o valor de b...">
-                <input id="numC" type="number" required="true" placeholder="Digite o valor de c...">
-                <button onclick="calcBhaskara()" id="btnCalcBhaskara">Calcular</button>
+                <input id="numA" type="number" placeholder="Digite o valor de a..." required>
+                <input id="numB" type="number" placeholder="Digite o valor de b..." required>
+                <input id="numC" type="number" placeholder="Digite o valor de c..." required>
+                <button onclick="calcBhaskara()" type="submit" id="btnCalcBhaskara">Calcular</button>
             </div>
         </div>
         <div id="operacoesBhaskara" class="operacoes">
@@ -131,6 +143,7 @@
     </article>
 
     <script src="src/js/components/sidebar.js"></script>
+    <script src="src/js/components/dropdown.js"></script>
     <script src="src/js/features/multiplicacao.js"></script>
     <script src="src/js/features/exponenciacao.js"></script>
     <script src="src/js/features/bhaskara.js"></script>

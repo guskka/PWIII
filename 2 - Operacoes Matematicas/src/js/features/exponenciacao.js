@@ -17,14 +17,6 @@ numExponenciacao.addEventListener("input", () => {
     if (numExponenciacao.value != "") {
         document.getElementById("operacoesExponenciacoes").style.display = "flex";
     }
-    else {
-        resQuadrado.value = 0;
-        resCubo.value = 0;
-        resQuarta.value = 0;
-        resQuinta.value = 0;
-        resSexta.value = 0;
-        document.getElementById("operacoesExponenciacoes").style.display = "none";
-    }
 
     const valor = numExponenciacao.value;
 

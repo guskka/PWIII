@@ -1,0 +1,47 @@
+#dropdownMultiplicacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .25rem;
+    border-radius: 100%;
+    border: 2px solid var(--red);
+    background-color: transparent;
+    font-size: var(--h5);
+}
+
+#multiplicacoes i {
+    color: var(--red);
+}
+
+#dropdownExpoente {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .25rem;
+    border-radius: 100%;
+    border: 2px solid var(--yellow);
+    background-color: transparent;
+    font-size: var(--h5);
+}
+
+#exponenciacoes i {
+    color: var(--yellow);
+}
+
+#dropdownBhaskara {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: .25rem;
+    border-radius: 100%;
+    border: 2px solid var(--orange);
+    background-color: transparent;
+    font-size: var(--h5);
+}
+
+#bhaskara i {
+    color: var(--orange);
+}

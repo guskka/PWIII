@@ -1,0 +1,32 @@
+function dropdownMultiplicacoes() {
+    if (document.getElementById("operacoesMultiplicacao").style.display === "flex") {
+        document.getElementById("operacoesMultiplicacao").style.display = "none";
+        document.getElementById("dropdownMultiplicacao").innerHTML = "<i class='bx bx-chevron-down'></i>";
+    }
+    else {
+        document.getElementById("operacoesMultiplicacao").style.display = "flex";
+        document.getElementById("dropdownMultiplicacao").innerHTML = "<i class='bx bx-chevron-up'></i>";
+    }
+}
+
+function dropdownExponenciacoes() {
+    if (document.getElementById("operacoesExponenciacoes").style.display === "flex") {
+        document.getElementById("operacoesExponenciacoes").style.display = "none";
+        document.getElementById("dropdownExpoente").innerHTML = "<i class='bx bx-chevron-down'></i>";
+    }
+    else {
+        document.getElementById("operacoesExponenciacoes").style.display = "flex";
+        document.getElementById("dropdownExpoente").innerHTML = "<i class='bx bx-chevron-up'></i>";
+    }
+}
+
+function dropdownBhaskara() {
+    if (document.getElementById("operacoesBhaskara").style.display === "flex") {
+        document.getElementById("operacoesBhaskara").style.display = "none";
+        document.getElementById("dropdownBhaskara").innerHTML = "<i class='bx bx-chevron-down'></i>";
+    }
+    else {
+        document.getElementById("operacoesBhaskara").style.display = "flex";
+        document.getElementById("dropdownBhaskara").innerHTML = "<i class='bx bx-chevron-up'></i>";
+    }
+}
