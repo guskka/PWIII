@@ -111,13 +111,29 @@
                 <input id="numA" type="number" required="true" placeholder="Digite o valor de a...">
                 <input id="numB" type="number" required="true" placeholder="Digite o valor de b...">
                 <input id="numC" type="number" required="true" placeholder="Digite o valor de c...">
-                <button id="btnCalcBhaskara" onclick="calcBhaskara()">Calcular</button>
+                <button onclick="calcBhaskara()" id="btnCalcBhaskara">Calcular</button>
+            </div>
+        </div>
+        <div id="operacoesBhaskara" class="operacoes">
+            <div class="operacaoDelta">
+                <h3>Delta</h3>
+                <input id="resDelta" disabled="true" type="number">
+            </div>
+            <div class="operacaoX1">
+                <h3>x1</h3>
+                <input id="resX1" disabled="true" type="number">
+            </div>
+            <div class="operacaoX2">
+                <h3>x2</h3>
+                <input id="resX2" disabled="true" type="number">
             </div>
         </div>
     </article>
 
     <script src="src/js/components/sidebar.js"></script>
-    <script type="module" src="src/js/main.js"></script>
+    <script src="src/js/features/multiplicacao.js"></script>
+    <script src="src/js/features/exponenciacao.js"></script>
+    <script src="src/js/features/bhaskara.js"></script>
 </body>
 
 </html>
