@@ -1,0 +1,21 @@
+.divParcelas {
+  @apply flex h-[50px] rounded-lg border-2 border-bg-3 font-semibold transition-all ease-in-out duration-250 cursor-pointer;
+  outline: none;
+}
+
+.divParcelas:hover {
+  @apply bg-orange-h/15 border-orange-h;
+  transition: all 0.5s ease;
+}
+
+.selectParcelas:checked {
+  @apply rounded-lg border-2 border-orange-h bg-orange-h/15;
+}
+
+.selectParcelas option {
+  @apply bg-bg-0-h;
+}
+
+.selectParcelas option:checked {
+  @apply checked:bg-orange-h checked:border-2 checked:border-orange-h;
+}

@@ -2,3 +2,5 @@
 @import "tailwindcss";
 @import "./colors.css";
 @import "./checkbox.css";
+@import "./radio.css";
+@import "./select.css";
