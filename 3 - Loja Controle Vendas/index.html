@@ -138,7 +138,7 @@
     </article> -->
 
     <section
-      class="flex flex-grow items-center justify-center max-w-7xl mx-auto overflow-hidden"
+      class="flex flex-grow items-center justify-center max-w-6xl mx-auto overflow-hidden"
     >
       <div
         id="sliderContainer"
@@ -151,8 +151,8 @@
           <div class="w-2/5 bg-contain">
             <img
               class="w-full"
-              src="src/assets/test.webp"
-              alt="teste"
+              src="src/assets/camiseta-regata.webp"
+              alt="Camiseta Regata"
               srcset=""
             />
           </div>
@@ -236,11 +236,11 @@
         <div
           class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
         >
-          <div class="w-2/5 bg-contain">
+          <div class="w-2/5">
             <img
-              class="w-full"
-              src="src/assets/teste.webp"
-              alt="teste"
+              class="w-full aspect-square object-cover"
+              src="src/assets/camisa-social.webp"
+              alt="Camisa Social"
               srcset=""
             />
           </div>
@@ -321,6 +321,884 @@
         </div>
 
         <!-- Blusa -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/blusa.webp"
+              alt="Blusa"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">BLUSA</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 119,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeBlusa"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pullover -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/pullover.webp"
+              alt="Pullover"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">PULLOVER</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 39,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadePullover"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sapato -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/sapato.webp"
+              alt="Sapato"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">SAPATO</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 99,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeSapato"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calça -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/calça.webp"
+              alt="Calça"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">CALÇA</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 38,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeCalca"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meias -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/meias.webp"
+              alt="Meias"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">MEIAS</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 9,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeMeias"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Luvas -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/luvas.webp"
+              alt="Luvas"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">LUVAS</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 24,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeLuvas"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jaqueta -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/jaqueta.jpg"
+              alt="Jaqueta"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">JAQUETA</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 329,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeJaqueta"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bermuda -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/bermuda.webp"
+              alt="Bermuda"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">BERMUDA</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 69,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeBermuda"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chinelo -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/chinelo.jpg"
+              alt="Chinelo"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">CHINELO</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 14,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeChinelo"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boné -->
+        <div
+          class="slideItem flex flex-row items-start justify-center min-w-full gap-16"
+        >
+          <div class="w-2/5">
+            <img
+              class="w-full aspect-square object-cover"
+              src="src/assets/boné.webp"
+              alt="Boné"
+              srcset=""
+            />
+          </div>
+          <div class="flex flex-col gap-8 pt-6">
+            <div class="flex items-center gap-4">
+              <h2 class="text-3xl font-bold">BONÉ</h2>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">R$ 6,90</p>
+            </div>
+            <div class="flex flex-col items-start gap-8">
+              <div
+                class="flex text-center w-2/5 rounded-sm border-1 border-bg-3 bg-none"
+              >
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, 1)"
+                  disabled
+                >
+                  +
+                </button>
+                <input
+                  id="quantidadeBone"
+                  class="quantidadeProduto text-center w-1/3 opacity-50 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                  type="number"
+                  name=""
+                  value="0"
+                  disabled
+                />
+                <button
+                  class="btnAlterarQuantidade font-bold p-2 w-1/3 opacity-50 cursor-pointer"
+                  onclick="alterarQuantidade(this, -1)"
+                  disabled
+                >
+                  –
+                </button>
+              </div>
+              <div class="flex items-center">
+                <!-- Checkbox by Andreas Storm -->
+                <div class="checkbox-wrapper-12">
+                  <div class="cbx">
+                    <input
+                      id="cbx-12"
+                      class="checkboxProduto"
+                      type="checkbox"
+                      onchange="toggleProduto(this)"
+                    />
+                    <label for="cbx-12"></label>
+                    <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
+                      <path d="M2 8.36364L6.23077 12L13 2"></path>
+                    </svg>
+                  </div>
+                  <!-- Gooey-->
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                      <filter id="goo-12">
+                        <fegaussianblur
+                          in="SourceGraphic"
+                          stddeviation="4"
+                          result="blur"
+                        ></fegaussianblur>
+                        <fecolormatrix
+                          in="blur"
+                          mode="matrix"
+                          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7"
+                          result="goo-12"
+                        ></fecolormatrix>
+                        <feblend in="SourceGraphic" in2="goo-12"></feblend>
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <i class="bx bx-cart text-xl ml-2"></i>
+                <p class="text-base ml-2 font-bold">Adicionar</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <button
         id="btnPrev"
