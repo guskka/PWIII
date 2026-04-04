@@ -20,6 +20,8 @@ function calcularValorCompra() {
 
   let valorCompra = subValorCompra;
   const metodoPagamento = document.querySelector(".radioPagamento:checked");
+  const divParcelas = document.getElementById("divParcelas");
+  const selParcelas = document.getElementById("parcelas");
   const parcelas = document.getElementById("parcelas").value;
 
   if (metodoPagamento.id === "aVista") {
@@ -35,6 +37,16 @@ function calcularValorCompra() {
       alert(
         "O valor da parcela não pode ser inferior a R$10,00. O pagamento foi alterado para À Vista",
       );
+
+      selParcelas.disabled = true;
+      selParcelas.selectedIndex = 0;
+      divParcelas.classList.remove(
+        "hover:bg-orange-h/15",
+        "hover:border-orange-h",
+        "cursor-pointer",
+        "border-orange-h",
+      );
+      divParcelas.classList.add("opacity-50", "border-bg-3");
 
       return calcularValorCompra();
     }
