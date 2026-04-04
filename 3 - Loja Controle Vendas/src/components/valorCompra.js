@@ -1,3 +1,4 @@
+const subValorCompraElement = document.getElementById("subValorCompra");
 const valorCompraElement = document.getElementById("valorCompra");
 
 function calcularValorCompra() {
@@ -14,6 +15,8 @@ function calcularValorCompra() {
       subValorCompra += preco * quantidade;
     }
   });
+
+  subValorCompraElement.textContent = subValorCompra.toFixed(2);
 
   let valorCompra = subValorCompra;
   const metodoPagamento = document.querySelector(".radioPagamento:checked");
