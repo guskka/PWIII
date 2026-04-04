@@ -42,4 +42,6 @@ function alterarQuantidade(botao, valor) {
   if (novoValor >= 1) {
     input.value = novoValor;
   }
+
+  calcularValorCompra();
 }

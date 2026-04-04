@@ -12,7 +12,7 @@
     <header class="flex flex-col items-center justify-center w-full pt-6 px-6">
       <h1 class="text-3xl font-bold font-sans text-fg-1">
         Loja de
-        <span class="text-3xl text-orange-h font-['Georgia','serif'] italic"
+        <span class="text-3xl text-orange-h font-['IBM_Plex_Serif'] italic"
           >< Roupas ></span
         >
       </h1>
@@ -90,6 +90,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="19.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -178,6 +179,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="59.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -266,6 +268,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="119.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -354,6 +357,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="39.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -442,6 +446,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="99.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -530,6 +535,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="38.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -618,6 +624,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="9.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -706,6 +713,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="24.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -794,6 +802,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="329.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -882,6 +891,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="69.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -970,6 +980,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="14.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -1058,6 +1069,7 @@
                       class="checkboxProduto"
                       type="checkbox"
                       onchange="toggleProduto(this)"
+                      data-preco="6.90"
                     />
                     <label for="cbx-12"></label>
                     <svg width="15" height="14" viewbox="0 0 15 14" fill="none">
@@ -1117,8 +1129,9 @@
           <div class="radio-input">
             <label class="label">
               <input
-                type="radio"
+                class="radioPagamento"
                 id="aVista"
+                type="radio"
                 name="value-radio"
                 value=""
                 checked
@@ -1129,7 +1142,7 @@
           <!-- Radio by Na3ar-17 -->
           <div class="radio-input">
             <label class="label">
-              <input type="radio" id="aPrazo" name="value-radio" value="" />
+              <input class="radioPagamento" id="aPrazo" type="radio" name="value-radio" value="" />
               <p class="font-semibold">À Prazo</p>
             </label>
           </div>
@@ -1190,7 +1203,7 @@
             class="flex items-center justify-center text-xl font-bold h-[50px] rounded-lg border-2 border-orange-h bg-orange-h/50"
           >
             <p>R$</p>
-            <span id="totalValue">0,00</span>
+            <span id="valorCompra">0,00</span>
           </div>
         </div>
       </div>
@@ -1206,8 +1219,9 @@
     </section>
 
     <script src="src/components/navbar.js"></script>
+    <script src="src/components/sliderProdutos.js"></script>
     <script src="src/components/quantidadeProduto.js"></script>
     <script src="src/components/tipoPagamento.js"></script>
-    <script src="src/components/sliderProdutos.js"></script>
+    <script src="src/components/valorCompra.js"></script>
   </body>
 </html>

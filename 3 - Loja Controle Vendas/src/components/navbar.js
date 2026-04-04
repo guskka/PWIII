@@ -1,7 +1,7 @@
 const secProdutos = document.getElementById("secProdutos");
 const secPagamento = document.getElementById("secPagamento");
 
-secProdutos.style.display = "none";
+secPagamento.style.display = "none";
 
 function showPagamento() {
   secProdutos.style.display = "none";
