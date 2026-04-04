@@ -1118,10 +1118,10 @@
             <label class="label">
               <input
                 type="radio"
-                id=""
-                checked=""
+                id="aVista"
                 name="value-radio"
                 value=""
+                checked
               />
               <p class="font-semibold">À Vista</p>
             </label>
@@ -1129,29 +1129,55 @@
           <!-- Radio by Na3ar-17 -->
           <div class="radio-input">
             <label class="label">
-              <input
-                type="radio"
-                id=""
-                checked=""
-                name="value-radio"
-                value=""
-              />
+              <input type="radio" id="aPrazo" name="value-radio" value="" />
               <p class="font-semibold">À Prazo</p>
             </label>
           </div>
         </div>
         <div class="flex flex-col gap-2 w-full">
           <h3 class="text-center text-lg font-semibold">Parcelas</h3>
-          <div class="divParcelas">
+          <div
+            id="divParcelas"
+            class="flex h-[50px] rounded-lg border-2 border-bg-3 font-semibold cursor-pointer outline-none transition-all ease-in-out duration-300 hover:bg-orange-h/15 hover:border-orange-h"
+          >
             <select
-              class="selectParcelas outline-none w-full px-[20px] cursor-pointer appearance-none"
+              id="parcelas"
+              class="checked:rounded-lg checked:border-2 checked:border-orange-h checked:bg-orange-h/15 outline-none w-full px-[20px] cursor-pointer appearance-none"
               name=""
-              id=""
+              disabled
             >
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
+              <option
+                class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+                value="1"
+                id="optNenhuma"
+                hidden
+              >
+                0
+              </option>
+              <option
+                class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+                value="2"
+              >
+                2
+              </option>
+              <option
+                class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+                value="3"
+              >
+                3
+              </option>
+              <option
+                class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+                value="4"
+              >
+                4
+              </option>
+              <option
+                class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+                value="5"
+              >
+                5
+              </option>
             </select>
             <div class="relative right-3 top-3.5 pointer-events-none">
               <i class="bx bx-caret-down"></i>
@@ -1181,6 +1207,7 @@
 
     <script src="src/components/navbar.js"></script>
     <script src="src/components/quantidadeProduto.js"></script>
+    <script src="src/components/tipoPagamento.js"></script>
     <script src="src/components/sliderProdutos.js"></script>
   </body>
 </html>
