@@ -3,11 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Controle de Gastos</title>
   </head>
-  <body>
-
+  <body class="flex justify-center m-12 bg-bg-0-h text-fg-1 font-geist">
+    <main class="flex flex-col items-center gap-6 w-2/4 border-1 border-red">
+      <h1 class="text-2xl font-bold">Controle de Gastos</h1>
+      <form
+        id="formGasto"
+        class="flex flex-col items-center justify-center gap-4 w-full text-md"
+      >
+        <div class="flex items-center justify-center gap-8 w-full">
+          <input
+            id="descricao"
+            class="inputs"
+            type="text"
+            placeholder="Descrição..."
+            autocomplete="off"
+          />
+          <input
+            id="valor"
+            class="inputs"
+            type="number"
+            placeholder="Valor (R$)..."
+            autocomplete="off"
+          />
+          <select
+            id="categoria"
+            class="px-2 py-2.5 w-full bg-none rounded-lg border-2 border-bg-3 font-medium outline-none cursor-pointer transition-all ease-in-out duration-250 hover:bg-orange-h/15 hover:border-orange-h checked:rounded-lg checked:border-2 checked:border-orange-h checked:bg-orange-h/15"
+          >
+            <option
+              class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+              value=""
+              hidden
+            >
+              Categoria
+            </option>
+            <option
+              class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+              value="Alimentação"
+            >
+              Alimentação
+            </option>
+            <option
+              class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+              value="Transporte"
+            >
+              Transporte
+            </option>
+            <option
+              class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
+              value="Lazer"
+            >
+              Lazer
+            </option>
+          </select>
+        </div>
+        <button
+          class="p-2 w-full rounded-lg bg-orange-h/50 border-2 border-orange-h font-semibold cursor-pointer appearance-none"
+          type="submit"
+        >
+          Adicionar gasto
+        </button>
+      </form>
+    </main>
   </body>
 </html>

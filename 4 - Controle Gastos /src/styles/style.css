@@ -1,5 +1,3 @@
 @import "tailwindcss";
-
-@layer base {
-  @import "./global/index.css";
-}
+@import "./global/index.css";
+@import "./components/index.css";

@@ -1,0 +1,8 @@
+@layer components {
+  .inputs {
+    @apply p-2 w-full bg-none rounded-lg border-2 border-bg-3 font-medium outline-none cursor-pointer transition-all ease-in-out duration-250 appearance-none;
+    @apply hover:bg-orange-h/15 hover:border-orange-h;
+    @apply focus:bg-orange-h/15 focus:border-orange-h;
+    @apply [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
+  }
+}
