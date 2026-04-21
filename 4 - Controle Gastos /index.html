@@ -11,8 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Controle de Gastos</title>
   </head>
-  <body class="flex justify-center m-12 bg-bg-0-h text-fg-1 font-geist">
-    <main class="flex flex-col items-center gap-6 w-2/4 border-1 border-red">
+  <body
+    class="flex items-center justify-center m-12 bg-bg-0-h text-fg-1 font-geist"
+  >
+    <main
+      class="flex flex-col items-center gap-6 p-8 w-2/4 h-[600px] bg-bg-0 rounded-xl"
+    >
       <h1 class="text-2xl font-bold">Controle de Gastos</h1>
       <!-- formulário para inserir os gastos na lista -->
       <form
@@ -86,7 +90,7 @@
           <!-- filtro categoria -->
           <select
             id="categoriaFiltro"
-            class="px-1 py-1.5 w-full bg-none rounded-lg border-2 border-bg-3 font-medium outline-none cursor-pointer transition-all ease-in-out duration-250 hover:bg-orange-h/15 hover:border-orange-h checked:rounded-lg checked:border-2 checked:border-orange-h checked:bg-orange-h/15"
+            class="px-1 py-1.5 w-full bg-none rounded-lg border-2 border-bg-3 text-sm font-medium outline-none cursor-pointer transition-all ease-in-out duration-250 hover:bg-orange-h/15 hover:border-orange-h checked:rounded-lg checked:border-2 checked:border-orange-h checked:bg-orange-h/15"
           >
             <option
               class="bg-bg-0-h checked:bg-orange-h checked:border-2 checked:border-orange-h"
@@ -115,7 +119,7 @@
           </select>
         </div>
         <div
-          class="flex px-3 py-1.5 rounded-lg border-2 border-bg-3 text-md font-semibold"
+          class="flex px-4 py-1.5 bg-bg-1 rounded-lg border-2 border-bg-3 text-md font-semibold"
         >
           <h5>
             Valor Total: <span id="valorTotal" class="text-fg">R$ 0,00</span>
@@ -123,9 +127,12 @@
         </div>
       </div>
       <!-- lista gastos -->
-      <div class="">
-        <ul id="listaGastos"></ul>
+      <div
+        class="w-full max-h-[300px] overflow-y-auto pr-2 scroll-smooth [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-bg-2 [&::-webkit-scrollbar-thumb]:rounded-full"
+      >
+        <ul id="listaGastos" class="flex flex-col gap-2 w-full"></ul>
       </div>
     </main>
+    <script src="src/main.js"></script>
   </body>
 </html>
