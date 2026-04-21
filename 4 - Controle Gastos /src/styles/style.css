@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@layer base {
+  @import "./global/index.css";
+}
