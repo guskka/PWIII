@@ -11,7 +11,8 @@ let gastos = JSON.parse(localStorage.getItem("gastos")) || [];
 
 // função para atualizar o valor total na tela
 const atualizarTotal = () => {
-  const total = gastos.reduce((acc, gasto) => acc + gasto.valor, 0); // reduce
+  // percorre o array e compacta os valores em um só, acc começa com 0 e soma com o valor obtido do array
+  const total = gastos.reduce((acc, gasto) => acc + gasto.valor, 0);
   // exibindo o valor de forma simples com duas casas decimais
   spanValorTotal.textContent = `R$ ${total.toFixed(2)}`;
 };
@@ -20,9 +21,11 @@ const atualizarTotal = () => {
 const renderizarLista = (categoriaFiltrada = "Todos") => {
   listaUl.innerHTML = "";
 
+  // condicao if else
   const gastosExibidos =
     categoriaFiltrada === "Todos"
       ? gastos
+      // item sendo analisado, depois atribuido a categoria do item, compara a categoria que usuário escolheu
       : gastos.filter((g) => g.categoria === categoriaFiltrada);
 
   gastosExibidos.forEach((gasto, index) => {
@@ -46,38 +49,44 @@ const renderizarLista = (categoriaFiltrada = "Todos") => {
   });
 
   atualizarTotal();
+  // transforma objetos do array em strings
   localStorage.setItem("gastos", JSON.stringify(gastos));
 };
 
 // submit do formulário
 form.addEventListener("submit", (e) => {
+  // cancela o refresh após clicar no botão submit do form
   e.preventDefault();
 
   const descricao = inputDescricao.value.trim();
   const valorNum = parseFloat(inputValor.value);
   const categoria = selectCategoria.value;
 
+  // se não conter nada em descrição ou nan em valor ou nada em categoria 
   if (!descricao || isNaN(valorNum) || !categoria) {
     alert("Preencha todos os campos corretamente!");
     return;
   }
 
-  // primeira letra maiúscula
+  // transforma a primeira letra em maiúscula
   const descTratada =
     descricao.charAt(0).toUpperCase() + descricao.slice(1).toLowerCase();
 
+  // cria um objeto
   const novoGasto = {
     descricao: descTratada,
     valor: valorNum,
     categoria: categoria,
   };
 
+  // salva o objeto na memória volátil para entrar no localstorage na função renderizarlista()
   gastos.push(novoGasto);
 
   // reseta o formulário e foca no primeiro campo
   form.reset();
   inputDescricao.focus();
 
+  // renderiza a lista com a categoria selecionada para filtro
   renderizarLista(selectFiltro.value);
 });
 
