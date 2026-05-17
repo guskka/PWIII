@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Geist";
+  src: url("../../../public/fonts/Geist/Geist-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Junicode";
+  src: url("../../../public/fonts/Junicode/VAR/JunicodeVF-Roman.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-geist: "Geist", sans-serif;
+  --font-junicode: "Junicode", sans-serif;
+}
