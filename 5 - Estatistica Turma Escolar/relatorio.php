@@ -118,57 +118,58 @@ if ($percentual_aprovacao >= 70) {
 </head>
 
 <body class="flex flex-col items-center max-h-screen bg-bg-0-h text-fg-1">
+  <main class="flex flex-col gap-12 items-center justify-center py-20 px-35 rounded-lg font-geist">
+    <div class="text-center">
+      <h1 class="mb-1 font-junicode font-medium tracking-wide text-center text-7xl">relatório final<br><span class="text-orange italic"><?php echo $turma; ?></span></h1>
+      <p>Resultados individuais por aluno.</p>
+    </div>
 
-  <h2>Relatório Final - Turma: <?php echo htmlspecialchars($turma); ?></h2>
-  <hr>
-
-  <h3>Resultados Individuais por Aluno</h3>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Nota 1</th>
-        <th>Nota 2</th>
-        <th>Trabalho</th>
-        <th>Média</th>
-        <th>Raiz Soma Notas</th>
-        <th>Diferença Absoluta</th>
-        <th>Situação</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($relatorio_alunos as $ra) { ?>
-        <tr>
-          <td><?php echo htmlspecialchars($ra['nome']); ?></td>
-          <td><?php echo number_format($ra['n1'], 1, ',', '.'); ?></td>
-          <td><?php echo number_format($ra['n2'], 1, ',', '.'); ?></td>
-          <td><?php echo number_format($ra['nt'], 1, ',', '.'); ?></td>
-          <td><?php echo number_format($ra['media'], 2, ',', '.'); ?></td>
-          <td><?php echo number_format($ra['raiz'], 2, ',', '.'); ?></td>
-          <td><?php echo number_format($ra['dif'], 2, ',', '.'); ?></td>
-          <td><?php echo $ra['situacao']; ?></td>
+    <table class="border-2 border-fg-1" border="1">
+      <thead class="p-4 border-2">
+        <tr class="">
+          <th class="p-4">Nome</th>
+          <th class="p-4">Nota 1</th>
+          <th class="p-4">Nota 2</th>
+          <th class="p-4">Trabalho</th>
+          <th class="p-4">Média</th>
+          <th class="p-4">Raiz Soma Notas</th>
+          <th class="p-4">Diferença Absoluta</th>
+          <th class="p-4">Situação</th>
         </tr>
-      <?php } ?>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <?php foreach ($relatorio_alunos as $ra) { ?>
+          <tr>
+            <td class="p-4"><?php echo htmlspecialchars($ra['nome']); ?></td>
+            <td class="p-4"><?php echo number_format($ra['n1'], 1, ',', '.'); ?></td>
+            <td class="p-4"><?php echo number_format($ra['n2'], 1, ',', '.'); ?></td>
+            <td class="p-4"><?php echo number_format($ra['nt'], 1, ',', '.'); ?></td>
+            <td class="p-4"><?php echo number_format($ra['media'], 2, ',', '.'); ?></td>
+            <td class="p-4"><?php echo number_format($ra['raiz'], 2, ',', '.'); ?></td>
+            <td class="p-4"><?php echo number_format($ra['dif'], 2, ',', '.'); ?></td>
+            <td class="p-4"><?php echo $ra['situacao']; ?></td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
 
-  <h3>Relatório Estatístico da Turma</h3>
-  <ul>
-    <li>Média geral da turma: <?php echo number_format($media_geral_turma, 2, ',', '.'); ?></li>
-    <li>Maior média encontrada: <?php echo number_format($maior_media, 2, ',', '.'); ?></li>
-    <li>Menor média encontrada: <?php echo number_format($menor_media, 2, ',', '.'); ?></li>
-    <li>Quantidade de aprovados: <?php echo $aprovados; ?></li>
-    <li>Quantidade em recuperação: <?php echo $recuperacao; ?></li>
-    <li>Quantidade de reprovados: <?php echo $reprovados; ?></li>
-    <li>Percentual de aprovação: <?php echo number_format($percentual_aprovacao, 1, ',', '.'); ?>%</li>
-    <li>Soma total de todas as notas lançadas: <?php echo number_format($soma_todas_notas, 1, ',', '.'); ?></li>
-  </ul>
+    <h3>Relatório Estatístico da Turma</h3>
+    <ul>
+      <li>Média geral da turma: <?php echo number_format($media_geral_turma, 2, ',', '.'); ?></li>
+      <li>Maior média encontrada: <?php echo number_format($maior_media, 2, ',', '.'); ?></li>
+      <li>Menor média encontrada: <?php echo number_format($menor_media, 2, ',', '.'); ?></li>
+      <li>Quantidade de aprovados: <?php echo $aprovados; ?></li>
+      <li>Quantidade em recuperação: <?php echo $recuperacao; ?></li>
+      <li>Quantidade de reprovados: <?php echo $reprovados; ?></li>
+      <li>Percentual de aprovação: <?php echo number_format($percentual_aprovacao, 1, ',', '.'); ?>%</li>
+      <li>Soma total de todas as notas lançadas: <?php echo number_format($soma_todas_notas, 1, ',', '.'); ?></li>
+    </ul>
 
-  <p><strong>Aviso do Sistema:</strong> <?php echo $mensagem_desempenho; ?></p>
+    <p><strong>Aviso do Sistema:</strong> <?php echo $mensagem_desempenho; ?></p>
 
-  <br>
-  <a href="index.php">Realizar Nova Análise</a>
-
+    <br>
+    <a class="flex items-center justify-center gap-1 py-2 px-5 rounded-lg bg-fg-1 text-bg-0-h cursor-pointer" href="index.php">Nova Análise</a>
+  </main>
 </body>
 
 </html>
