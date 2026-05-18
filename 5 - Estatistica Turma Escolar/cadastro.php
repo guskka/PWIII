@@ -57,7 +57,7 @@ $qtd_alunos = intval($_POST["qtd_alunos"]);
     </div>
 
     <div>
-      <form class="flex flex-col gap-4 h-65 overflow-y-auto scrollbar-thin [scrollbar-color:var(--color-orange)_var(--color-bg-0-h)]" method="POST" action="relatorio.php">
+      <form id="formCadastro" class="flex flex-col gap-4 h-65 overflow-y-auto scrollbar-thin [scrollbar-color:var(--color-orange)_var(--color-bg-0-h)]" method="POST" action="relatorio.php">
         <input type="hidden" name="turma" value="<?php echo $turma; ?>">
         <input type="hidden" name="qtd_alunos" value="<?php echo $qtd_alunos; ?>">
 
@@ -71,12 +71,11 @@ $qtd_alunos = intval($_POST["qtd_alunos"]);
           </div>
           <hr>
         <?php } ?>
-
       </form>
     </div>
 
     <div class="flex flex-col gap-2 items-center">
-      <button class="flex items-center justify-center gap-1 py-2 px-5 rounded-lg bg-fg-1 text-bg-0-h cursor-pointer" type="submit">
+      <button class="flex items-center justify-center gap-1 py-2 px-5 rounded-lg bg-fg-1 text-bg-0-h cursor-pointer" type="submit" form="formCadastro">
         Gerar relatório
         <i class="bx bx-arrow-right-stroke"></i>
       </button>
