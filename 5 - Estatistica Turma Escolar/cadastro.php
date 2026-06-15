@@ -53,7 +53,7 @@ $qtd_alunos = intval($_POST["qtd_alunos"]);
 <body class="flex flex-col items-center max-h-screen bg-bg-0-h text-fg-1">
   <main class="flex flex-col gap-12 items-center justify-center mt-20 rounded-lg font-geist">
     <div class="text-center">
-      <h1 class="mb-1 font-junicode font-medium tracking-wide text-center text-7xl">cadastro notas <br><span class="text-orange italic"><?php echo htmlspecialchars($turma); ?></span></h1>
+      <h1 class="mb-1 font-junicode font-medium tracking-wide text-center text-7xl">cadastro notas <br><span class="text-orange italic"><?php echo $turma; ?></span></h1>
     </div>
 
     <div>
