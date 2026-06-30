@@ -1,7 +1,7 @@
-CREATE DATABASE db_mundo;
-USE db_mundo;
+CREATE DATABASE IF NOT EXISTS bd_mundo;
+USE bd_mundo;
 
-CREATE TABLE continente (
+CREATE TABLE continentes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     populacao BIGINT,
@@ -9,9 +9,9 @@ CREATE TABLE continente (
     total_paises INT DEFAULT 0
 );
 
-CREATE TABLE governante (
+CREATE TABLE governantes (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(150) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     partido_politico VARCHAR(100),
     data_nascimento DATE,
     idade INT,
@@ -19,30 +19,30 @@ CREATE TABLE governante (
     data_fim_mandato DATE
 );
 
-CREATE TABLE pais (
+CREATE TABLE paises (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     continente_id INT,
     populacao BIGINT,
     area_km2 DECIMAL(12,2),
-    idioma VARCHAR(100),
+    idioma VARCHAR(50),
     governante_id INT,
-    clima VARCHAR(100),
-    regime_politico VARCHAR(100),
-    moeda VARCHAR(50),
-    FOREIGN KEY (continente_id) REFERENCES continente(id) ON DELETE RESTRICT,
-    FOREIGN KEY (governante_id) REFERENCES governante(id) ON DELETE SET NULL
+    clima VARCHAR(50),
+    regime_politico VARCHAR(50),
+    moeda VARCHAR(30),
+    FOREIGN KEY (continente_id) REFERENCES continentes(id) ON DELETE RESTRICT,
+    FOREIGN KEY (governante_id) REFERENCES governantes(id) ON DELETE SET NULL
 );
 
-CREATE TABLE cidade (
+CREATE TABLE cidades (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     pais_id INT NOT NULL,
     populacao BIGINT,
     area_km2 DECIMAL(12,2),
-    clima VARCHAR(100),
+    clima VARCHAR(50),
     governante_id INT,
     data_fundacao DATE,
-    FOREIGN KEY (pais_id) REFERENCES pais(id) ON DELETE CASCADE, 
-    FOREIGN KEY (governante_id) REFERENCES governante(id) ON DELETE SET NULL
+    FOREIGN KEY (pais_id) REFERENCES paises(id) ON DELETE CASCADE,
+    FOREIGN KEY (governante_id) REFERENCES governantes(id) ON DELETE SET NULL
 );
