@@ -1,16 +1,13 @@
 # CRUD Mundo - Sistema de Gerenciamento Geográfico
 
-### Identificação do Aluno
-- **Nome:** [Seu Nome Aqui]
-- [cite_start]**Curso:** Técnico em Desenvolvimento de Sistemas [cite: 39]
-- [cite_start]**Unidade:** Etec São José dos Campos [cite: 40]
+- **Aluno:** Gustavo Henrique de Oliveira Gonçalves
 
 ## Descrição do Projeto
 Uma aplicação web completa (Full-Stack) voltada para o gerenciamento de dados de distribuições geográficas e esferas governamentais (Continentes, Países, Cidades e Governantes). O sistema implementa validações em tempo real e opera respeitando regras restritas de integridade relacional.
 
 ## Tecnologias Utilizadas
-- **Front-End:** HTML5 Semântico, CSS3 Flexbox/Grid e Vanilla JavaScript.
-- **Back-End:** PHP 8 (Orientado a Segurança com PDO).
+- **Front-End:** HTML5, CSS3 e Vanilla JavaScript.
+- **Back-End:** PHP.
 - **Banco de Dados:** MySQL.
 
 ## Como Executar o Projeto
