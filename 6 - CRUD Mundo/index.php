@@ -1,4 +1,6 @@
 <?php
+require_once 'includes/auth.php';
+exigirLogin('');
 require_once 'config/conexao.php';
 
 $totalPaises = $pdo->query("SELECT COUNT(*) FROM paises")->fetchColumn();
@@ -36,6 +38,9 @@ $cidadesPorCont = $pdo->query("
             <a href="views/paises.php">Países</a>
             <a href="views/cidades.php">Cidades</a>
             <a href="views/governantes.php">Governantes</a>
+            <a href="views/logs.php">Logs</a>
+            <span style="margin-left: 1.5rem; opacity: 0.85;">👤 <?= htmlspecialchars($_SESSION['usuario_nome'] ?? '') ?></span>
+            <a href="logout.php">Sair</a>
         </nav>
     </header>
     

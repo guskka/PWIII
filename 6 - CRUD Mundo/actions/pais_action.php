@@ -1,4 +1,6 @@
 <?php
+require_once '../includes/auth.php';
+exigirLogin('../');
 require_once '../config/conexao.php';
 $action = $_POST['action'] ?? $_GET['action'] ?? '';
 

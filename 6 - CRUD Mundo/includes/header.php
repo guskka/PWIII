@@ -15,6 +15,9 @@
             <a href="paises.php">Países</a>
             <a href="cidades.php">Cidades</a>
             <a href="governantes.php">Governantes</a>
+            <a href="logs.php">Logs</a>
+            <span style="margin-left: 1.5rem; opacity: 0.85;">👤 <?= htmlspecialchars($_SESSION['usuario_nome'] ?? '') ?></span>
+            <a href="../logout.php">Sair</a>
         </nav>
     </header>
     <main class="main-content">

@@ -1,4 +1,6 @@
 <?php 
+require_once '../includes/auth.php';
+exigirLogin('../');
 require_once '../config/conexao.php';
 include_once '../includes/header.php';
 

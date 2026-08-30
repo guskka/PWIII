@@ -1,4 +1,6 @@
 <?php 
+require_once '../includes/auth.php';
+exigirLogin('../');
 require_once '../config/conexao.php';
 include_once '../includes/header.php';
 $govs = $pdo->query("SELECT * FROM governantes ORDER BY nome ASC")->fetchAll();
