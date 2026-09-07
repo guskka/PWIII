@@ -47,6 +47,10 @@ CREATE TABLE IF NOT EXISTS cidades (
     FOREIGN KEY (governante_id) REFERENCES governantes(id) ON DELETE SET NULL
 );
 
+-- =========================================================
+-- Módulo de Autenticação
+-- =========================================================
+
 CREATE TABLE IF NOT EXISTS usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,

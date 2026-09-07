@@ -31,6 +31,7 @@ Como esse é o primeiro acesso desse usuário, o sistema obrigará a troca de se
 - **Tabela `logs`**: registra cada evento de autenticação (login com sucesso, falha, bloqueio automático, troca de senha e logout), com data/hora e IP de origem.
 - **Bloqueio por tentativas**: ao errar a senha 3 vezes consecutivas, o usuário é automaticamente bloqueado (`bloqueado = 1`) e impedido de tentar novamente, mesmo com a senha correta, até que um administrador o desbloqueie diretamente no banco de dados. Um acerto na senha antes da 3ª tentativa zera o contador.
 - **Troca de senha obrigatória**: enquanto `primeiro_acesso = 1`, o usuário é redirecionado para `trocar_senha.php` em qualquer tentativa de acessar outra página, até definir uma nova senha (mínimo de 6 caracteres).
+- **Manutenção de senha sob demanda**: além da troca obrigatória, o usuário logado pode acessar `trocar_senha.php` a qualquer momento pelo link "Alterar Senha" no menu, informando senha atual, nova senha e confirmação. O `UPDATE` é feito em `actions/senha_action.php`.
 - **Tela de Logs** (`views/logs.php`): permite consultar o histórico de acessos registrado na tabela `logs`.
 
 ### Novos arquivos

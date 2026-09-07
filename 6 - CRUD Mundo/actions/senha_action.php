@@ -38,4 +38,4 @@ $_SESSION['primeiro_acesso'] = false;
 
 registrarLog($pdo, $usuario['id'], $usuario['login'], 'TROCA_SENHA');
 
-header("Location: ../index.php");
+header("Location: ../index.php?senha_alterada=1");

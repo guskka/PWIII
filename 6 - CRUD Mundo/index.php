@@ -39,6 +39,7 @@ $cidadesPorCont = $pdo->query("
             <a href="views/cidades.php">Cidades</a>
             <a href="views/governantes.php">Governantes</a>
             <a href="views/logs.php">Logs</a>
+            <a href="trocar_senha.php">Alterar Senha</a>
             <span style="margin-left: 1.5rem; opacity: 0.85;">👤 <?= htmlspecialchars($_SESSION['usuario_nome'] ?? '') ?></span>
             <a href="logout.php">Sair</a>
         </nav>
@@ -46,6 +47,12 @@ $cidadesPorCont = $pdo->query("
     
     <main class="main-content">
         <h2 style="margin-bottom: 1.5rem;">Painel de Estatísticas Globais</h2>
+
+        <?php if (isset($_GET['senha_alterada'])): ?>
+        <p style="background:#e8f8f0; color:var(--success); padding:0.75rem 1rem; border-radius:4px; margin-bottom:1.5rem; font-weight:600;">
+            Senha alterada com sucesso!
+        </p>
+        <?php endif; ?>
         
         <div class="card-grid">
             <div class="card" style="border-left: 5px solid var(--success);">
