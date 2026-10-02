@@ -1,42 +1,72 @@
-# CRUD Mundo - Sistema de Gerenciamento Geográfico
+# CRUD Mundo
 
-- **Aluno:** Gustavo Henrique de Oliveira Gonçalves
+Sistema web para gerenciamento de dados geográficos e governamentais, com cadastro de continentes, países, cidades e seus respectivos governantes.
 
-## Descrição do Projeto
-Uma aplicação web completa (Full-Stack) voltada para o gerenciamento de dados de distribuições geográficas e esferas governamentais (Continentes, Países, Cidades e Governantes). O sistema implementa validações em tempo real e opera respeitando regras restritas de integridade relacional.
+## Sobre o projeto
 
-## Tecnologias Utilizadas
-- **Front-End:** HTML5, CSS3 e Vanilla JavaScript.
-- **Back-End:** PHP.
-- **Banco de Dados:** MySQL.
+O CRUD Mundo é uma aplicação full-stack desenvolvida para organizar e consultar informações geográficas do planeta de forma relacional: continentes contêm países, países contêm cidades, e tanto países quanto cidades podem estar associados a um governante. O sistema permite cadastrar, consultar, editar e excluir registros em todas essas entidades, respeitando as regras de integridade entre elas (por exemplo, um continente não pode ser excluído enquanto possuir países vinculados).
 
-## Como Executar o Projeto
+Além do CRUD geográfico, o sistema conta com um módulo de autenticação completo: o acesso às telas é protegido por login, o usuário é obrigado a trocar a senha padrão no primeiro acesso, pode alterar sua senha a qualquer momento e tem todas as tentativas de acesso (sucesso, falha, bloqueio e logout) registradas em uma tabela de logs auditável.
+
+## Funcionalidades
+
+- Login de usuário com sessão protegida
+- Bloqueio automático de acesso após 3 tentativas de senha incorretas consecutivas
+- Troca de senha obrigatória no primeiro acesso ao sistema
+- Alteração de senha sob demanda (senha atual, nova senha e confirmação)
+- Registro de logs de autenticação (login, falha, bloqueio e logout)
+- Cadastro, edição e exclusão de continentes
+- Cadastro, edição e exclusão de países, vinculados a um continente e, opcionalmente, a um governante
+- Cadastro, edição e exclusão de cidades, vinculadas a um país e, opcionalmente, a um governante
+- Cadastro, edição e exclusão de governantes
+- Pesquisa em tempo real nas tabelas de listagem
+- Dashboard com estatísticas globais (total de países, total de cidades, cidade mais populosa e distribuição de cidades por continente)
+
+## Tecnologias utilizadas
+
+- PHP (PDO)
+- MySQL
+- HTML5
+- CSS3
+- JavaScript
+
+## Estrutura do projeto
+
+```
+6 - CRUD Mundo/
+├── actions/        # Scripts que processam os formulários (create, update, delete) e o login
+├── config/         # Configuração de conexão com o banco de dados (PDO)
+├── css/            # Folha de estilos da aplicação
+├── database/       # Script SQL de criação das tabelas e dados iniciais
+├── includes/       # Cabeçalho, rodapé e módulo de autenticação (auth.php)
+├── js/             # Script de front-end (busca nas tabelas, confirmação de exclusão, etc.)
+├── views/          # Telas de cadastro/listagem de continentes, países, cidades, governantes e logs
+├── index.php       # Dashboard principal do sistema
+├── login.php       # Tela de login
+├── logout.php      # Encerramento de sessão
+├── trocar_senha.php # Tela de troca de senha
+└── README.md
+```
+
+## Como executar
+
 1. Clone este repositório para o diretório raiz do seu servidor local (ex: `C:/xampp/htdocs/`).
-2. Abra o painel do MySQL e execute todo o script contido em `database/schema.sql` para gerar o ecossistema de tabelas.
-3. Se necessário, ajuste os parâmetros de usuário e senha dentro de `config/conexao.php`.
+2. Crie o banco de dados executando o script `database/schema.sql` no MySQL — ele cria todas as tabelas e já insere um usuário administrador inicial.
+3. Se necessário, ajuste usuário e senha de acesso ao banco em `config/conexao.php`.
 4. Acesse pelo navegador em: `http://localhost/crud-mundo/login.php`.
+5. Faça login com as credenciais iniciais abaixo. Como é o primeiro acesso, o sistema vai pedir a troca de senha antes de liberar o restante do sistema.
 
-## Módulo de Autenticação
+## Requisitos
 
-O acesso ao sistema agora é protegido por login. Todas as telas do CRUD (Dashboard, Continentes, Países, Cidades e Governantes) exigem uma sessão ativa.
+- PHP 7.4 ou superior (com extensão PDO MySQL habilitada)
+- MySQL ou MariaDB
+- Servidor local como XAMPP, WAMP ou similar
 
-**Credenciais iniciais (criadas pelo `schema.sql`):**
+## Credenciais iniciais
+
 - **Login:** `admin`
 - **Senha:** `admin123`
 
-Como esse é o primeiro acesso desse usuário, o sistema obrigará a troca de senha antes de liberar qualquer outra tela.
+## Autor
 
-### Regras implementadas
-- **Tabela `usuarios`**: armazena login, senha (hash `bcrypt` via `password_hash`), flag de primeiro acesso, contador de tentativas de senha incorreta e flag de bloqueio.
-- **Tabela `logs`**: registra cada evento de autenticação (login com sucesso, falha, bloqueio automático, troca de senha e logout), com data/hora e IP de origem.
-- **Bloqueio por tentativas**: ao errar a senha 3 vezes consecutivas, o usuário é automaticamente bloqueado (`bloqueado = 1`) e impedido de tentar novamente, mesmo com a senha correta, até que um administrador o desbloqueie diretamente no banco de dados. Um acerto na senha antes da 3ª tentativa zera o contador.
-- **Troca de senha obrigatória**: enquanto `primeiro_acesso = 1`, o usuário é redirecionado para `trocar_senha.php` em qualquer tentativa de acessar outra página, até definir uma nova senha (mínimo de 6 caracteres).
-- **Manutenção de senha sob demanda**: além da troca obrigatória, o usuário logado pode acessar `trocar_senha.php` a qualquer momento pelo link "Alterar Senha" no menu, informando senha atual, nova senha e confirmação. O `UPDATE` é feito em `actions/senha_action.php`.
-- **Tela de Logs** (`views/logs.php`): permite consultar o histórico de acessos registrado na tabela `logs`.
-
-### Novos arquivos
-- `login.php`, `logout.php`, `trocar_senha.php` — telas do fluxo de autenticação.
-- `actions/auth_action.php` — processa o login, o contador de tentativas e o bloqueio.
-- `actions/senha_action.php` — processa a troca de senha.
-- `includes/auth.php` — funções centrais de sessão (`estaLogado`, `exigirLogin`, `registrarLog`).
-- `views/logs.php` — consulta da tabela `logs`.
+Gustavo Henrique de Oliveira Gonçalves
